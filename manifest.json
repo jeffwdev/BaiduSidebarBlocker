@@ -1,0 +1,31 @@
+﻿{
+    "name": "BaiduSidebarBlocker",
+    "version": "1.0",
+    "short_name": "BaiduBlocker",
+    "description": "Blocks sidebar ads and trending searches from Baidu search results for a cleaner experience",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.baidu.com/*",
+                "http://*.baidu.com/*",
+                "https://*.baidu.com/*"
+            ],
+            "css": [
+                "res/css/style.css"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://*.baidu.com/*"
+    ],
+    "icons": {
+        "16": "res/icons/16.png",
+        "48": "res/icons/48.png",
+        "128": "res/icons/128.png"
+    },
+    "action": {
+        "default_icon": "res/icons/128.png",
+        "default_popup": "res/popup.html"
+    },
+    "manifest_version": 3
+}
